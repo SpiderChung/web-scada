@@ -1,5 +1,5 @@
 # web-scada
-```java
+```Java
 package ru.schung.webscadabulgar.model;
 
 import lombok.Data;
