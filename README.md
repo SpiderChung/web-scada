@@ -1,6 +1,5 @@
 # web-scada
-
-'''java
+```java
 package ru.schung.webscadabulgar.model;
 
 import lombok.Data;
@@ -11,4 +10,4 @@ public class HistoryTelemetry {
     private Double value;
     private String name;
 }
-'''
+```
