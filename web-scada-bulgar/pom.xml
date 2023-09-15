@@ -64,13 +64,29 @@
             <optional>true</optional>
         </dependency>
 
+<!--        <dependency>-->
+<!--            <groupId>jeasyopc</groupId>-->
+<!--            <artifactId>jeasyopc</artifactId>-->
+<!--            <version>2.3.2</version>-->
+<!--            <scope>system</scope>-->
+<!--            <systemPath>${project.basedir}/3rd/jeasyopc-2.3.2/jeasyopc.jar</systemPath>-->
+<!--            <type>jar</type>-->
+<!--            <optional>true</optional>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>jeasyopc</groupId>-->
+<!--            <artifactId>jeasyopc</artifactId>-->
+<!--            <version>2.3.2</version>-->
+<!--        </dependency>-->
+
         <dependency>
             <groupId>jeasyopc</groupId>
             <artifactId>jeasyopc</artifactId>
-            <version>2.3.2</version>
+            <version>4.1</version>
             <scope>system</scope>
-            <systemPath>${pom.basedir}/3rd/jeasyopc-2.3.2/jeasyopc.jar</systemPath>
+            <systemPath>${basedir}/src/main/resources/jeasyopc.jar</systemPath>
         </dependency>
+
 
         <dependency>
             <groupId>org.apache.maven.plugins</groupId>
@@ -79,7 +95,6 @@
         </dependency>
 
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -87,22 +102,57 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${project.parent.version}</version>
                 <configuration>
-<!--                    <skip>true</skip>-->
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
+                    <includeSystemScope>true</includeSystemScope>
                 </configuration>
                 <executions>
                     <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
+                        <configuration>
+                            <mainClass>ru.schung.webscadabulgar.WebScadaBulgarApplication</mainClass>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-jar-plugin</artifactId>-->
+<!--                <version>3.3.0</version>-->
+<!--                <configuration>-->
+<!--                    <archive>-->
+<!--                        <manifest>-->
+<!--                            <addClasspath>true</addClasspath>-->
+<!--                            <mainClass>ru.schung.webscadabulgar.WebScadaBulgarApplication</mainClass>-->
+<!--                        </manifest>-->
+<!--                    </archive>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+        </plugins>
+    </build>
+
+
+
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--                <version>${project.parent.version}</version>-->
+<!--                <configuration>-->
+<!--&lt;!&ndash;                    <skip>true</skip>&ndash;&gt;-->
+<!--                    <excludes>-->
+<!--                        <exclude>-->
+<!--                            <groupId>org.projectlombok</groupId>-->
+<!--                            <artifactId>lombok</artifactId>-->
+<!--                        </exclude>-->
+<!--                    </excludes>-->
+<!--                </configuration>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <goals>-->
+<!--                            <goal>repackage</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
 
 
 <!--            <plugin>-->
@@ -158,7 +208,7 @@
 <!--                    </execution>-->
 <!--                </executions>-->
 <!--            </plugin>-->
-        </plugins>
-    </build>
+<!--        </plugins>-->
+<!--    </build>-->
 
 </project>
