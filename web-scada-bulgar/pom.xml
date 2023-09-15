@@ -63,6 +63,14 @@
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
         </dependency>
+
+        <dependency>
+            <groupId>org.jeasyopc</groupId>
+            <artifactId>jeasyopc-2.3.2</artifactId>
+            <version>2.3.2</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/3rd/jeasyopc-2.3.2/jeasyopc.jar</systemPath>
+        </dependency>
     </dependencies>
 
     <build>
