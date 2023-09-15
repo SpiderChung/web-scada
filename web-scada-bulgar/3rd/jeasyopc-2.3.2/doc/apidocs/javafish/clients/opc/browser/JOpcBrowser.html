@@ -90,12 +90,12 @@ javafish.clients.opc.browser</FONT>
 Class JOpcBrowser</H2>
 <PRE>
 java.lang.Object
-  <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../javafish/clients/opc/JCustomOpc.html" title="class in javafish.clients.opc">javafish.clients.opc.JCustomOpc</A>
+  <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><A HREF="../JCustomOpc.html" title="class in javafish.clients.opc">javafish.clients.opc.JCustomOpc</A>
       <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><B>javafish.clients.opc.browser.JOpcBrowser</B>
 </PRE>
 <HR>
 <DL>
-<DT><PRE>public class <B>JOpcBrowser</B><DT>extends <A HREF="../../../../javafish/clients/opc/JCustomOpc.html" title="class in javafish.clients.opc">JCustomOpc</A></DL>
+<DT><PRE>public class <B>JOpcBrowser</B><DT>extends <A HREF="../JCustomOpc.html" title="class in javafish.clients.opc">JCustomOpc</A></DL>
 </PRE>
 
 <P>
@@ -163,10 +163,10 @@ OPC Browser: browses brances and items of OPC Server.
 &nbsp;<A NAME="methods_inherited_from_class_javafish.clients.opc.JCustomOpc"><!-- --></A>
 <TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
 <TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
-<TH ALIGN="left"><B>Methods inherited from class javafish.clients.opc.<A HREF="../../../../javafish/clients/opc/JCustomOpc.html" title="class in javafish.clients.opc">JCustomOpc</A></B></TH>
+<TH ALIGN="left"><B>Methods inherited from class javafish.clients.opc.<A HREF="../JCustomOpc.html" title="class in javafish.clients.opc">JCustomOpc</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../javafish/clients/opc/JCustomOpc.html#coInitialize()">coInitialize</A>, <A HREF="../../../../javafish/clients/opc/JCustomOpc.html#connect()">connect</A>, <A HREF="../../../../javafish/clients/opc/JCustomOpc.html#coUninitialize()">coUninitialize</A>, <A HREF="../../../../javafish/clients/opc/JCustomOpc.html#getFullOpcServerName()">getFullOpcServerName</A>, <A HREF="../../../../javafish/clients/opc/JCustomOpc.html#getHost()">getHost</A>, <A HREF="../../../../javafish/clients/opc/JCustomOpc.html#getServerClientHandle()">getServerClientHandle</A>, <A HREF="../../../../javafish/clients/opc/JCustomOpc.html#getServerProgID()">getServerProgID</A>, <A HREF="../../../../javafish/clients/opc/JCustomOpc.html#ping()">ping</A></CODE></TD>
+<TD><CODE><A HREF="../JCustomOpc.html#coInitialize()">coInitialize</A>, <A HREF="../JCustomOpc.html#connect()">connect</A>, <A HREF="../JCustomOpc.html#coUninitialize()">coUninitialize</A>, <A HREF="../JCustomOpc.html#getFullOpcServerName()">getFullOpcServerName</A>, <A HREF="../JCustomOpc.html#getHost()">getHost</A>, <A HREF="../JCustomOpc.html#getServerClientHandle()">getServerClientHandle</A>, <A HREF="../JCustomOpc.html#getServerProgID()">getServerProgID</A>, <A HREF="../JCustomOpc.html#ping()">ping</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -218,8 +218,8 @@ public <B>JOpcBrowser</B>(java.lang.String&nbsp;host,
 getOpcServers</H3>
 <PRE>
 public static java.lang.String[] <B>getOpcServers</B>(java.lang.String&nbsp;host)
-                                        throws <A HREF="../../../../javafish/clients/opc/exception/HostException.html" title="class in javafish.clients.opc.exception">HostException</A>,
-                                               <A HREF="../../../../javafish/clients/opc/exception/NotFoundServersException.html" title="class in javafish.clients.opc.exception">NotFoundServersException</A></PRE>
+                                        throws <A HREF="../exception/HostException.html" title="class in javafish.clients.opc.exception">HostException</A>,
+                                               <A HREF="../exception/NotFoundServersException.html" title="class in javafish.clients.opc.exception">NotFoundServersException</A></PRE>
 <DL>
 <DD>STATIC: Get OPC-Servers from host computer
 <P>
@@ -227,8 +227,8 @@ public static java.lang.String[] <B>getOpcServers</B>(java.lang.String&nbsp;host
 <DT><B>Parameters:</B><DD><CODE>host</CODE> - String - computer name (tcp/ip)
 <DT><B>Returns:</B><DD>servers String[] - returned array with names of OPC Servers
 <DT><B>Throws:</B>
-<DD><CODE><A HREF="../../../../javafish/clients/opc/exception/HostException.html" title="class in javafish.clients.opc.exception">HostException</A></CODE>
-<DD><CODE><A HREF="../../../../javafish/clients/opc/exception/NotFoundServersException.html" title="class in javafish.clients.opc.exception">NotFoundServersException</A></CODE></DL>
+<DD><CODE><A HREF="../exception/HostException.html" title="class in javafish.clients.opc.exception">HostException</A></CODE>
+<DD><CODE><A HREF="../exception/NotFoundServersException.html" title="class in javafish.clients.opc.exception">NotFoundServersException</A></CODE></DL>
 </DD>
 </DL>
 <HR>
@@ -237,8 +237,8 @@ public static java.lang.String[] <B>getOpcServers</B>(java.lang.String&nbsp;host
 getOpcBranch</H3>
 <PRE>
 public java.lang.String[] <B>getOpcBranch</B>(java.lang.String&nbsp;branch)
-                                throws <A HREF="../../../../javafish/clients/opc/exception/UnableBrowseBranchException.html" title="class in javafish.clients.opc.exception">UnableBrowseBranchException</A>,
-                                       <A HREF="../../../../javafish/clients/opc/exception/UnableIBrowseException.html" title="class in javafish.clients.opc.exception">UnableIBrowseException</A></PRE>
+                                throws <A HREF="../exception/UnableBrowseBranchException.html" title="class in javafish.clients.opc.exception">UnableBrowseBranchException</A>,
+                                       <A HREF="../exception/UnableIBrowseException.html" title="class in javafish.clients.opc.exception">UnableIBrowseException</A></PRE>
 <DL>
 <DD>Get branch of OPC browser tree
 <P>
@@ -246,8 +246,8 @@ public java.lang.String[] <B>getOpcBranch</B>(java.lang.String&nbsp;branch)
 <DT><B>Parameters:</B><DD><CODE>branch</CODE> - String
 <DT><B>Returns:</B><DD>items of branch String[]
 <DT><B>Throws:</B>
-<DD><CODE><A HREF="../../../../javafish/clients/opc/exception/UnableBrowseBranchException.html" title="class in javafish.clients.opc.exception">UnableBrowseBranchException</A></CODE>
-<DD><CODE><A HREF="../../../../javafish/clients/opc/exception/UnableIBrowseException.html" title="class in javafish.clients.opc.exception">UnableIBrowseException</A></CODE></DL>
+<DD><CODE><A HREF="../exception/UnableBrowseBranchException.html" title="class in javafish.clients.opc.exception">UnableBrowseBranchException</A></CODE>
+<DD><CODE><A HREF="../exception/UnableIBrowseException.html" title="class in javafish.clients.opc.exception">UnableIBrowseException</A></CODE></DL>
 </DD>
 </DL>
 <HR>
@@ -257,10 +257,10 @@ getOpcItems</H3>
 <PRE>
 public java.lang.String[] <B>getOpcItems</B>(java.lang.String&nbsp;leaf,
                                       boolean&nbsp;download)
-                               throws <A HREF="../../../../javafish/clients/opc/exception/UnableBrowseLeafException.html" title="class in javafish.clients.opc.exception">UnableBrowseLeafException</A>,
-                                      <A HREF="../../../../javafish/clients/opc/exception/UnableIBrowseException.html" title="class in javafish.clients.opc.exception">UnableIBrowseException</A>,
-                                      <A HREF="../../../../javafish/clients/opc/exception/UnableAddGroupException.html" title="class in javafish.clients.opc.exception">UnableAddGroupException</A>,
-                                      <A HREF="../../../../javafish/clients/opc/exception/UnableAddItemException.html" title="class in javafish.clients.opc.exception">UnableAddItemException</A></PRE>
+                               throws <A HREF="../exception/UnableBrowseLeafException.html" title="class in javafish.clients.opc.exception">UnableBrowseLeafException</A>,
+                                      <A HREF="../exception/UnableIBrowseException.html" title="class in javafish.clients.opc.exception">UnableIBrowseException</A>,
+                                      <A HREF="../exception/UnableAddGroupException.html" title="class in javafish.clients.opc.exception">UnableAddGroupException</A>,
+                                      <A HREF="../exception/UnableAddItemException.html" title="class in javafish.clients.opc.exception">UnableAddItemException</A></PRE>
 <DL>
 <DD>Get items descriptions.
  <p>
@@ -271,10 +271,10 @@ public java.lang.String[] <B>getOpcItems</B>(java.lang.String&nbsp;leaf,
 <DT><B>Parameters:</B><DD><CODE>leaf</CODE> - of branch (items) String<DD><CODE>download</CODE> - - if is true, Client downloads last value of items
 <DT><B>Returns:</B><DD>description of items String[]
 <DT><B>Throws:</B>
-<DD><CODE><A HREF="../../../../javafish/clients/opc/exception/UnableBrowseLeafException.html" title="class in javafish.clients.opc.exception">UnableBrowseLeafException</A></CODE>
-<DD><CODE><A HREF="../../../../javafish/clients/opc/exception/UnableIBrowseException.html" title="class in javafish.clients.opc.exception">UnableIBrowseException</A></CODE>
-<DD><CODE><A HREF="../../../../javafish/clients/opc/exception/UnableAddGroupException.html" title="class in javafish.clients.opc.exception">UnableAddGroupException</A></CODE>
-<DD><CODE><A HREF="../../../../javafish/clients/opc/exception/UnableAddItemException.html" title="class in javafish.clients.opc.exception">UnableAddItemException</A></CODE></DL>
+<DD><CODE><A HREF="../exception/UnableBrowseLeafException.html" title="class in javafish.clients.opc.exception">UnableBrowseLeafException</A></CODE>
+<DD><CODE><A HREF="../exception/UnableIBrowseException.html" title="class in javafish.clients.opc.exception">UnableIBrowseException</A></CODE>
+<DD><CODE><A HREF="../exception/UnableAddGroupException.html" title="class in javafish.clients.opc.exception">UnableAddGroupException</A></CODE>
+<DD><CODE><A HREF="../exception/UnableAddItemException.html" title="class in javafish.clients.opc.exception">UnableAddItemException</A></CODE></DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->
