@@ -8,6 +8,8 @@ import org.springframework.context.annotation.Bean;
 import ru.schung.webscadabulgar.model.Student;
 
 import javax.sql.DataSource;
+import java.io.File;
+import java.lang.reflect.Field;
 
 @SpringBootApplication
 public class WebScadaBulgarApplication {
@@ -20,10 +22,22 @@ public class WebScadaBulgarApplication {
 
     @Bean
     public JOpc opcClient() {
-        return new JOpc("127.0.0.1", "22323", "MatrikonOPC");
+
+        return new JOpc("127.0.0.1", "MatrikonOPC.opc", "MatrikonOPC");
     }
     public static void main(String[] args) {
 
+//        System.loadLibrary("JCustomOpc.dll");
+
+
+
+        try {
+            Field field = ClassLoader.class.getDeclaredField("sys_paths");
+            field.setAccessible(true);
+            field.set(null, null);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         SpringApplication.run(WebScadaBulgarApplication.class, args);
 
 
