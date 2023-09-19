@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/1.iml" filepath="$PROJECT_DIR$/.idea/1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/web-scada-bulgar/web-scada-bulgar.iml" filepath="$PROJECT_DIR$/web-scada-bulgar/web-scada-bulgar.iml" />
     </modules>
   </component>
 </project>

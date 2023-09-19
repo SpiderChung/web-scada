@@ -10,6 +10,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import javax.swing.event.EventListenerList;
+import java.io.File;
 import java.util.Properties;
 
 /**
@@ -64,11 +65,15 @@ abstract public class JCustomOpc {
 
   static {
     // load class properties
-    props = PropertyLoader.loadProperties(JCustomOpc.class);
+//    props = PropertyLoader.loadProperties(JCustomOpc.class);
     // load native library OPC Client
+//    System.setProperty("java.library.path", "./lib");
+//    System.out.println(System.getProperty("java.library.path"));
 //    System.loadLibrary(props.getProperty("library.path"));
+
 //    System.loadLibrary("JCustomOpc");
-    System.load("/Volumes/Delay/Myproject/1/web-scada-bulgar/src/main/resources/JCustomOpc.dll");
+//    File file = new File("/Users/spiderchung/IdeaProjects/web-scada-bulgar/web-scada-bulgar/src/main/resources/JCustomOpc.dll");
+    System.load("/Users/spiderchung/IdeaProjects/web-scada-bulgar/web-scada-bulgar/src/main/resources/JCustomOpc.dll");
   }
 
   /**

@@ -31,6 +31,10 @@ public class WebScadaBulgarApplication {
         return new JEasyOpc("127.0.0.1", "MatrikonOPC.opc", "MatrikonOPC");
     }
     public static void main(String[] args) throws Exception {
+        Runtime.getRuntime().load("/Users/spiderchung/IdeaProjects/web-scada-bulgar/web-scada-bulgar/lib/JCustomOpc.dll");
+        System.out.println(System.getProperty("java.library.path"));
+//        System.load("/Users/spiderchung/IdeaProjects/web-scada-bulgar/web-scada-bulgar/lib/JCustomOpc.dll");
+        System.setProperty("java.library.path", "/Users/spiderchung/IdeaProjects/web-scada-bulgar/web-scada-bulgar/lib/");
         SpringApplication.run(WebScadaBulgarApplication.class, args);
 
 
