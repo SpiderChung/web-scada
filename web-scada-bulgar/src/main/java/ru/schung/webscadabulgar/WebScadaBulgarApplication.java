@@ -1,6 +1,9 @@
 package ru.schung.webscadabulgar;
 
+import javafish.clients.opc.JCustomOpc;
+import javafish.clients.opc.JEasyOpc;
 import javafish.clients.opc.JOpc;
+import javafish.clients.opc.property.PropertyLoader;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.jdbc.DataSourceBuilder;
@@ -10,6 +13,7 @@ import ru.schung.webscadabulgar.model.Student;
 import javax.sql.DataSource;
 import java.io.File;
 import java.lang.reflect.Field;
+import java.util.Properties;
 
 @SpringBootApplication
 public class WebScadaBulgarApplication {
@@ -21,23 +25,12 @@ public class WebScadaBulgarApplication {
 //    }
 
     @Bean
-    public JOpc opcClient() {
+    public JEasyOpc opcClient() {
 
-        return new JOpc("127.0.0.1", "MatrikonOPC.opc", "MatrikonOPC");
+
+        return new JEasyOpc("127.0.0.1", "MatrikonOPC.opc", "MatrikonOPC");
     }
-    public static void main(String[] args) {
-
-//        System.loadLibrary("JCustomOpc.dll");
-
-
-
-        try {
-            Field field = ClassLoader.class.getDeclaredField("sys_paths");
-            field.setAccessible(true);
-            field.set(null, null);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public static void main(String[] args) throws Exception {
         SpringApplication.run(WebScadaBulgarApplication.class, args);
 
 
